@@ -232,7 +232,7 @@ class MockServerRunner(object):
         )
 
         self.mock_server_thread = Thread(target=self.mock_server.serve_forever)
-        self.mock_server_thread.setDaemon(True)
+        self.mock_server_thread.daemon = True
         self.mock_server_thread.start()
 
         return self
